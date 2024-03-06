@@ -112,7 +112,7 @@ const Navbar = () => {
                             className={
                               pathName === items.pathname
                                 ? " border-b-2 border-blue-500 text-blue-800 hover:text-blue-600"
-                                : " text-black hover:text-blue-600"
+                                : " text-black hover:text-[#375E97]"
                             }
                           >
                             {items.route}
@@ -130,8 +130,8 @@ const Navbar = () => {
               ))}
             </div>
           </div>
-          <Link href="/" className=" text-4xl text-black font-bold bg-blue-300 h-16 w-40 flex items-center justify-center">
-            Lak <span className="text-[#14532D] ">hTakar</span> Site
+          <Link href="/" className=" text-4xl text-[#05386B] font-bold  h-16 w-40 flex items-center justify-center">
+            Lakh <span className="text-[#5CDB95] bg-blue-800 rounded-full p-3">Takar</span> Site
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex space-x-10 text-lg font-bold ">
@@ -148,8 +148,8 @@ const Navbar = () => {
                   
                   className={
                     pathName === items.pathname
-                      ? " border-b-2 border-blue-500 text-blue-800 hover:text-blue-600"
-                      : " text-black hover:text-blue-600"
+                      ? " border-b-2 border-blue-500 text-[#05386B] hover:text-blue-600"
+                      : " text-blue-600 hover:text-[#375E97]"
                   }
                 >
                   {items.route}
