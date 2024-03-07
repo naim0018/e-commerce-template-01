@@ -29,13 +29,16 @@ const Banner = () => {
     }, 4000);
     return () => clearInterval(intervalId);
   }, [nextSlider]);
+
+
+
   return (
     <div className=" mt-5">
       <div className="h-[240px] w-full md:h-[470px] lg:h-[670px] relative overflow-hidden">
         {/* arrow left */}
         <button
           onClick={prevSlider}
-          className="absolute top-1/2 left-3 z-50 flex justify-center items-center bg-white rounded-full w-6 h-6 md:w-12 md:h-12"
+          className="absolute transform top-1/2 -translate-y-1/2 left-3 z-10 flex justify-center items-center bg-white rounded-full w-6 h-6 md:w-12 md:h-12"
         >
           <svg
             className="w-4 h-4 md:w-8 md:h-8 icon"
@@ -60,7 +63,7 @@ const Banner = () => {
         {/* arrow right */}
         <button
           onClick={nextSlider}
-          className="absolute top-1/2 z-50 right-3  flex justify-center items-center bg-white rounded-full w-6 h-6 md:w-12 md:h-12"
+          className="absolute transform top-1/2 -translate-y-1/2 z-10 right-3  flex justify-center items-center bg-white rounded-full w-6 h-6 md:w-12 md:h-12"
         >
           <svg
             className="w-4 h-4 md:w-8 md:h-8 icon"

@@ -2,7 +2,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { IoIosSearch } from "react-icons/io";
-
+import { TiShoppingCart } from "react-icons/ti";
+import { FaUserCircle } from "react-icons/fa";
 import React, { useEffect, useState } from "react";
 
 const Navbar = () => {
@@ -32,9 +33,6 @@ const Navbar = () => {
     }
   }, [hoverValue]);
 
-  console.log(hoverValue);
-  console.log(category);
-
   const navItems = [
     {
       route: "Book",
@@ -60,19 +58,24 @@ const Navbar = () => {
 
   return (
     <div className="container mx-auto">
+
+      {/* searchbar */}
       <div className="w-96 lg:w-2/5 mx-auto h-10 rounded-full text-center mt-5 flex items-center justify-center  border relative">
         <input
           type="text"
-          className="w-full h-full rounded-full pl-5 border placeholder-shown:border-blue-500 "
-          placeholder="Search By Category "
+          className="w-full h-full rounded-full pl-5 border placeholder-shown:border-blue-500"
+          placeholder="Search By Category"
         />
         <div className=" hidden sm:flex border-black absolute right-5">
           <IoIosSearch className=" text-3xl"/>
         </div>
       </div>
-      <div className="navbar bg-base-100">
-        <div className="navbar-start gap-5">
-          <div className="dropdown">
+
+
+      {/* Navbar */}
+      <div className="flex items-center justify-center">
+        <div className="basis-1/7 lg:flex-grow-0  gap-5  flex items-center">
+          <div className=" dropdown  lg:hidden ">
             <div
               tabIndex={0}
               role="button"
@@ -95,7 +98,7 @@ const Navbar = () => {
             </div>
             <div
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-5 shadow bg-base-100 rounded-box w-52 space-y-7 text-base font-bold"
+              className=" menu menu-sm dropdown-content mt-3 z-[50] p-5 shadow bg-base-100 rounded-box w-52 space-y-7 text-base font-bold"
             >
               {navItems?.map((items) => (
                         <div
@@ -130,11 +133,15 @@ const Navbar = () => {
               ))}
             </div>
           </div>
-          <Link href="/" className=" text-4xl text-[#05386B] font-bold  h-16 w-40 flex items-center justify-center">
+        </div>
+       {/* logo  */}
+          <div className="basis-1/9 flex-grow lg:flex-grow-0   flex items-center justify-center"> 
+          <Link href="/" className="   text-[1rem] text-[#05386B] font-bold  h-16  flex items-center justify-center">
             Lakh <span className="text-[#5CDB95] bg-blue-800 rounded-full p-3">Takar</span> Site
           </Link>
-        </div>
-        <div className="navbar-center hidden lg:flex space-x-10 text-lg font-bold ">
+          </div>
+        {/* menu content */}
+        <div className="hidden lg:flex  lg:items-center lg:justify-center lg:flex-grow space-x-10 text-lg font-bold ">
           {navItems?.map((items) => (
             <div
               key={items.route}
@@ -155,7 +162,7 @@ const Navbar = () => {
                   {items.route}
                 </Link>
               </div>
-              <div className="hidden absolute group-hover:flex transform -translate-x-1/2 translate-y-0 gap-5 bg-white rounded-xl shadow-md p-8">
+              <div className="hidden absolute group-hover:flex z-50 transform -translate-x-1/2 translate-y-0 gap-5 bg-white rounded-xl shadow-md p-8">
                 {category &&
                   category?.map((item) => (
                     <div key={item} className="inline-block mr-2">
@@ -166,8 +173,10 @@ const Navbar = () => {
             </div>
           ))}
         </div>
-        <div className="navbar-end">
-          <a className="btn">Button</a>
+        {/* end button */}
+        <div className="basis-1/9   flex items-center justify-center gap-">
+          <a className="btn btn-ghost "><TiShoppingCart className="text-3xl"/></a>
+          <a className="btn btn-ghost"><FaUserCircle className="text-3xl"/></a>
         </div>
       </div>
     </div>
