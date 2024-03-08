@@ -56,14 +56,12 @@ const Navbar = () => {
     },
   ];
 
- 
-
   return (
-    <div className="container mx-auto mt-10">
+    <div className="container mx-auto mt-10 space-y-5 ">
      
      <Search/>
       {/* Navbar */}
-      <div className="flex items-center justify-center ">
+      <div className="flex h-20 items-center justify-center ">
         <div className="basis-1/7 lg:flex-grow-0  gap-5  flex items-center">
           <div className=" dropdown  lg:hidden ">
             <div
@@ -126,7 +124,7 @@ const Navbar = () => {
         <div className="basis-1/9 flex-grow lg:flex-grow-0   flex items-center justify-center">
           <Link
             href="/"
-            className="   text-[1rem] text-[#05386B] font-bold  h-16  flex items-center justify-center"
+            className="   text-[1.2rem] text-[#05386B] font-bold  h-16  flex items-center justify-center"
           >
             Lakh{" "}
             <span className="text-[#5CDB95] bg-blue-800 rounded-full p-3">

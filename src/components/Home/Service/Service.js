@@ -9,42 +9,42 @@ import { BiSolidLike } from "react-icons/bi";
 
 const Service = () => {
   return (
-    <div className='my-10 container mx-auto grid grid-cols-4 items-center justify-center '>
+    <div className='my-10 container mx-auto grid md:grid-cols-2 lg:grid-cols-4 items-center justify-center '>
 
-<div className="w-full h-full flex items-center justify-center gap-5 p-5 text-center place-self-center  border-r-2 border-black">
+<div className="w-full h-full flex items-center justify-center gap-5 p-5 text-center place-self-center  border-r-2 border-gray-300">
     <div className="">
-        <LiaShippingFastSolid className='text-sky-500 text-7xl'/>
+        <LiaShippingFastSolid className='text-sky-500 text-5xl'/>
     </div>
     <div className="flex flex-col items-center justify-center">
-        <h2>Free Shipping</h2>
+        <h3>Free Shipping</h3>
         <p>Free Shipping Over $100</p>
     </div>
 </div>
-<div className="w-full h-full flex items-center justify-center gap-5 p-5 text-center place-self-center border-r-2 border-black">
+<div className="w-full h-full flex items-center justify-center gap-5 p-5 text-center place-self-center border-l-2 md:border-l-0  lg:border-r-2 border-gray-300">
     <div className="">
-        <MdOutlinePayment className='text-sky-500 text-7xl'/>
+        <MdOutlinePayment className='text-sky-500 text-5xl'/>
     </div>
     <div className="flex flex-col items-center justify-center">
-        <h2>Free Shipping</h2>
-        <p>Free Shipping Over $100</p>
+        <h3>Secure Payment</h3>
+        <p>100% Secure Payment</p>
     </div>
 </div>
-<div className="w-full h-full flex items-center justify-center gap-5 p-5 text-center place-self-center border-r-2 border-black">
+<div className="w-full h-full flex items-center justify-center gap-5 p-5 text-center place-self-center border-r-2 border-gray-300">
     <div className="">
-        <MdSupportAgent className='text-sky-500 text-7xl'/>
+        <MdSupportAgent className='text-sky-500 text-5xl'/>
     </div>
     <div className="flex flex-col items-center justify-center">
-        <h2>Free Shipping</h2>
-        <p>Free Shipping Over $100</p>
+        <h3>24/7 Support</h3>
+        <p>Top quality Support</p>
     </div>
 </div>
-<div className="w-full h-full flex items-center justify-center gap-5 p-5 text-center place-self-center">
+<div className="w-full h-full flex items-center justify-center gap-5 p-5 text-center  place-self-center  border-l-2 md:border-l-0 border-gray-300 ">
     <div className="">
-        <BiSolidLike  className='text-sky-500 text-7xl'/>
+        <BiSolidLike  className='text-sky-500 text-5xl'/>
     </div>
     <div className="flex flex-col items-center justify-center">
-        <h2>Free Shipping</h2>
-        <p>Free Shipping Over $100</p>
+        <h3>Quality Products</h3>
+        <p>We insure Product Quality</p>
     </div>
 </div>
 

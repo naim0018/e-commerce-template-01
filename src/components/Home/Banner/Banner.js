@@ -4,12 +4,38 @@ import React, { useCallback, useEffect, useState } from "react";
 const Banner = () => {
   const [currentSlider, setCurrentSlider] = useState(0);
   const sliderImages = [
-    "https://source.unsplash.com/1200x670/?nature",
-    "https://source.unsplash.com/1200x670/?hill",
-    "https://source.unsplash.com/1200x670/?mountain",
-    "https://source.unsplash.com/1200x670/?river",
-    "https://source.unsplash.com/1200x670/?sea",
-  ];
+    "https://i.ibb.co/5kdNb1r/AMD-Ryzen-5-5600x.jpg",
+    "https://i.ibb.co/Fhw3VqW/ryzen-3500-500x500.jpg",
+    "https://i.ibb.co/dfHb9w9/AMD-Ryzen-95050-X.webp",
+    "https://i.ibb.co/K9HxfjY/amd-ryzen-7-5700g-desktop-pc-01.jpg",
+    "https://i.ibb.co/3RbvmXV/asus-rog-strix-g15-g513im-01-500x500.webp",
+    "https://i.ibb.co/ZSVWwtQ/intel-core-i5-6400t-quad-core-processor.jpg",
+    "https://i.ibb.co/4N04rWj/large14-gen-intel-processor-binary-logic.webp",
+    "https://i.ibb.co/wWLns4b/arc-pro-group-with-portal-png-rendition-intel-web-480-270.png",
+    "https://i.ibb.co/KqrZRZH/Prometheus1.jpg",
+    "https://i.ibb.co/r6rGPWB/intel-13th-gen-core-i5-13400-desktop-pc-001-500x500.webp",
+    "https://i.ibb.co/yW869sH/Apple-01.webp",
+    "https://i.ibb.co/NL60PSK/Apple-02.webp",
+    "https://i.ibb.co/qrG1bXw/Apple-03.jpg",
+    "https://i.ibb.co/stQwMWK/Ipad.jpg",
+    "https://i.ibb.co/Bt6XBmr/Ipad-02.jpg",
+    "https://i.ibb.co/WPnJ5Hw/hp-01.jpg",
+    "https://i.ibb.co/7bhJrFM/hp-03.png",
+    "https://i.ibb.co/QF9WW7B/hp-02.jpg",
+    "https://i.ibb.co/dWZsFTP/hp-05.webp",
+    "https://i.ibb.co/X24bK3v/hp-04.jpg",
+    "https://i.ibb.co/6nQLkNZ/Asus-laptop.jpg",
+    "https://i.ibb.co/0XbPN2Y/Asus-Laptop-1.jpg",
+    "https://i.ibb.co/41L0T8x/asus-laptop-2.jpg",
+    "https://i.ibb.co/6yjShT0/Asus-laptop-3.jpg",
+    "https://i.ibb.co/jvC2pJy/Asus-Laptop4.jpg",
+    "https://i.ibb.co/mNHLmMy/intel-logo-generic-678-678x452.png",
+    "https://i.ibb.co/DwbVBs8/apple-new-store-visual-identity-campaign-the-branding-journal-5.jpg",
+    "https://i.ibb.co/rQpy983/amd-ryzen-badge-circle-1024x576.jpg",
+    "https://i.ibb.co/nCN1nqh/hp.png",
+    "https://i.ibb.co/7WLGvSj/Asus.jpg",
+    "https://i.ibb.co/t3kGcdf/Symphony.png"
+];
   const prevSlider = () =>
     setCurrentSlider((currentSlider) =>
       currentSlider === 0 ? sliderImages.length - 1 : currentSlider - 1
@@ -33,15 +59,15 @@ const Banner = () => {
 
 
   return (
-    <div className=" mt-5">
-      <div className="h-[240px] w-full md:h-[470px] lg:h-[670px] relative overflow-hidden">
+    <div className="container mx-auto shadow-lg bg-red-500">
+      <div className="h-[240px] w-full md:h-[470px] lg:h-[670px] bg-black relative overflow-hidden">
         {/* arrow left */}
         <button
           onClick={prevSlider}
-          className="absolute transform top-1/2 -translate-y-1/2 left-3 z-10 flex justify-center items-center bg-white rounded-full w-6 h-6 md:w-12 md:h-12"
+          className="absolute transform top-1/2 -translate-y-1/2 left-3 z-10 flex justify-center items-center bg-white rounded-full w-6 h-6 md:w-8 md:h-12"
         >
           <svg
-            className="w-4 h-4 md:w-8 md:h-8 icon"
+            className="w-4 h-4 md:w-6 md:h-6 icon"
             viewBox="0 0 1024 1024"
             xmlns="http://www.w3.org/2000/svg"
             fill="#000000"
@@ -63,10 +89,10 @@ const Banner = () => {
         {/* arrow right */}
         <button
           onClick={nextSlider}
-          className="absolute transform top-1/2 -translate-y-1/2 z-10 right-3  flex justify-center items-center bg-white rounded-full w-6 h-6 md:w-12 md:h-12"
+          className="absolute transform top-1/2 -translate-y-1/2 z-10 right-3  flex justify-center items-center bg-white rounded-full w-6 h-6 md:w-8 md:h-12"
         >
           <svg
-            className="w-4 h-4 md:w-8 md:h-8 icon"
+            className="w-4 h-4 md:w-6 md:h-6 icon"
             viewBox="0 0 1024 1024"
             xmlns="http://www.w3.org/2000/svg"
             fill="#000000"
@@ -108,7 +134,7 @@ const Banner = () => {
             <img
               key={slide}
               src={slide}
-              className="min-w-full h-72 bg-black/20 sm:h-96 md:h-[670px] object-cover"
+              className="min-w-full h-72 sm:h-96 md:h-[670px] object-cover"
               alt={`Slider - ${inx + 1}`}
             />
           ))}
