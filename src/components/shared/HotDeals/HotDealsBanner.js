@@ -58,7 +58,7 @@ const HotDealsBanner = () => {
   }, [currentSlider]);
   return (
     <div>
-      <div className="w-full mx-auto flex flex-col  items-center overflow-hidden ">
+      <div className=" w-full mx-auto flex flex-col items-center overflow-hidden border-t border-t-gray-100 shadow-md rounded">
         <div className="relative overflow-hidden">
           {/* dots */}
           <div className="flex h-fit rounded-full z-50 absolute -right-6 bottom-1/2 w-fit gap-1 rotate-90">
@@ -74,13 +74,13 @@ const HotDealsBanner = () => {
           </div>
           {/* slider container */}
           <div
-            className="ease-linear duration-300 flex flex-col md:h-[330px] transform-gpu relative "
+            className=" ease-linear duration-300 flex flex-col h-[330px] transform-gpu relative"
             style={{ transform: `translateY(-${currentSlider * 100 }%)` }}
           >
             {/* sliders */}
             {products?.map((product,inx) => (
                
-                 <div key={inx} className=" min-w-full duration-200   before:-z-10 before:absolute before:text-3xl before:flex before:justify-center before:items-center  relative">
+                 <div key={inx} className="w-full duration-200   before:-z-10 before:absolute before:text-3xl before:flex before:justify-center before:items-center  relative">
                      <HotDeals key={inx} product={product}/>
                  </div>
             

@@ -121,7 +121,7 @@ const Navbar = () => {
           </div>
         </div>
         {/* logo  */}
-        <div className="basis-1/9 flex-grow lg:flex-grow-0   flex items-center justify-center">
+        <div className="basis-1/9 flex-grow lg:flex-grow-0   flex items-center justify-center font-lobster">
           <Link
             href="/"
             className="   text-[1.2rem] text-[#05386B] font-bold  h-16  flex items-center justify-center"

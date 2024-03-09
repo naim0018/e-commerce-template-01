@@ -20,7 +20,7 @@ const HotDeals = ({ product }) => {
   // const {id,productName,image,price,discountPrice,description,stock,sold} = product
 
   return (
-    <div className="container mx-auto sm:w-96 h-[330px] flex items-center justify-between border rounded gap-2 px-2 py-8 space-y-2 ">
+    <div className="container mx-auto h-[330px] flex items-center justify-between rounded gap-2  px-2 py-8 space-y-2 ">
       {/* <h3 className=''>Top Product</h3> */}
       {/* <hr className='my-2 w-1/2 border-sky-500'/> */}
       <Image
@@ -28,7 +28,7 @@ const HotDeals = ({ product }) => {
         width={200}
         height={200}
         alt="Product Name"
-        className="w-1/3 sm:w-1/2"
+        className="w-1/2"
       />
 
       <div className="flex-grow items-center justify-center space-y-3">
