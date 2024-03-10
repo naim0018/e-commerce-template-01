@@ -1,32 +1,57 @@
+import Carosule from '@/components/ui/Carosule/Carosule'
 import React from 'react'
-
 const DealsOfTheDay = () => {
-  return (
-    <div className='h-[400px] flex flex-col items-center justify-center space-y-5' >
-        <h2 className='pl-10  w-full '>DealsOfTheDay</h2>
-        <div className="px-10 pb-10 grid grid-cols-2 items-center justify-center">
-            <div className=" shadow-xl place-self-center">
-                <img src="https://i.ibb.co/5kdNb1r/AMD-Ryzen-5-5600x.jpg" alt="" className='w-full h-full bg-cover'/>
-            </div>
 
-            <div className="place-self-center text-center">
-                <h4>AMD-Ryzen-5-5600x</h4>
-                <p>Gaming Processor</p>
-                <div className="">
-                    <p>$154</p>
-                    <del>$200</del>
-                </div>
-                <div className="">
-                    <p>Sold : 0</p>
-                    <p>Available : 10</p>
-                </div>
-                <div className="">
-                <h4>Hurry up! Offer ends in : </h4>
-                
-                </div>
-                <button className="btn btn-primary">Add To Cart</button>
-            </div>
-        </div>
+    const products = [
+        {
+          "id": 1,
+          "productName": "AMD-Ryzen-5-5600x",
+          "image": "https://i.ibb.co/5kdNb1r/AMD-Ryzen-5-5600x.jpg",
+          "price": 250,
+          "discountPrice": 220,
+          "description": "Description of AMD Ryzen 5 5600x",
+          "stock": 50,
+          "sold": 10
+        },
+        {
+          "id": 2,
+          "productName": "ryzen-3500-500x500",
+          "image": "https://i.ibb.co/Fhw3VqW/ryzen-3500-500x500.jpg",
+          "price": 150,
+          "description": "Description of Ryzen 3500",
+          "stock": 30,
+          "sold": 5
+        },
+        {
+          "id": 3,
+          "productName": "AMD-Ryzen-95050-X",
+          "image": "https://i.ibb.co/dfHb9w9/AMD-Ryzen-95050-X.webp",
+          "price": 350,
+          "description": "Description of AMD Ryzen 95050 X",
+          "stock": 20,
+          "sold": 2
+        },
+        {
+          "id": 4,
+          "productName": "amd-ryzen-7-5700g-desktop-pc-01",
+          "image": "https://i.ibb.co/K9HxfjY/amd-ryzen-7-5700g-desktop-pc-01.jpg",
+          "price": 400,
+          "discountPrice": 380,
+          "description": "Description of AMD Ryzen 7 5700g",
+          "stock": 15,
+          "sold": 3
+        }
+      ]
+      
+
+  return (
+    <div className='bg-white border border-blue-500 flex flex-col items-center justify-center ' >
+        <h2 className='pl-5 pt-5 w-full text-indigo-600'>DealsOfTheDay</h2>
+       <div className="">
+       {
+        <Carosule item={products}/>
+       }
+       </div>
     </div>
   )
 }
