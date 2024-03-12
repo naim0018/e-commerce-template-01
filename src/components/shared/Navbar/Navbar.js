@@ -18,6 +18,7 @@ const Navbar = () => {
     "Wall Hanging",
   ];
   const electronics = ["Mobile", "Computer"];
+  
 
   const pathName = usePathname();
 
@@ -54,10 +55,14 @@ const Navbar = () => {
       route: "Ornaments",
       pathname: "/ornaments",
     },
+    {
+      route: "Stationary",
+      pathname: "/stationary",
+    },
   ];
 
   return (
-    <div className="container mx-auto mt-10 space-y-5 ">
+    <div className="container mx-auto pt-10 space-y-5 ">
      
      <Search/>
       {/* Navbar */}

@@ -2,7 +2,7 @@ import React from "react";
 
 const SuperSale = () => {
   return (
-    <div className="container mx-auto relative">
+    <div className="container mx-auto relative ">
       <div
         className=" absolute inset-0 bg-cover bg-center z-0 bg-[url('https://i.ibb.co/86ZgHfh/glossy-abstract-3840x1080-9602.jpg')]"
       />

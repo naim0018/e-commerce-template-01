@@ -1,4 +1,4 @@
-import Carosule from '@/components/ui/Carosule/Carosule'
+import Carosule from '@/components/shared/Carosule/Carosule'
 import React from 'react'
 
 const ExclusiveProducts = () => {
@@ -44,7 +44,7 @@ const ExclusiveProducts = () => {
   ]
   return (
     <div className='bg-white border border-blue-500 flex flex-col items-center justify-center ' >
-        <h2 className='pl-5 pt-5 w-full text-indigo-600'>DealsOfTheDay</h2>
+        <h2 className='pl-5 pt-5 w-full text-indigo-600'>Exclusive Products</h2>
        <div className="">
        {
         <Carosule item={products}/>

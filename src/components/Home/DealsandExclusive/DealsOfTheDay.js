@@ -1,4 +1,4 @@
-import Carosule from '@/components/ui/Carosule/Carosule'
+import Carosule from '@/components/shared/Carosule/Carosule'
 import React from 'react'
 const DealsOfTheDay = () => {
 
