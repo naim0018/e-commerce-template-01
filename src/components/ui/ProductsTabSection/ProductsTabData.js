@@ -10,7 +10,7 @@ const ProductsTabData = ({productCategory}) => {
     const books = [
         {
             "title": "The Da Vinci Code",
-            "image": "https://example.com/image1.jpg",
+            "image": "https://www.pexels.com/photo/topless-man-reading-book-while-seating-at-beach-922100/",
             "author": "Dan Brown",
             "ratings": 48,
             "stock": 80,
