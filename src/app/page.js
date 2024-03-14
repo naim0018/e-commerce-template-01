@@ -16,9 +16,9 @@ export default function Home() {
         </div>
       </div>
       <Service />
+      <ProductsTab/>
       <DealsandExclusive/>
       <SuperSale/>
-      <ProductsTab/>
     </main>
   );
 }
