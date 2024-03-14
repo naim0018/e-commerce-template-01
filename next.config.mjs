@@ -9,7 +9,11 @@ const nextConfig = {
         },
         {
             protocol:'https',
-            hostname:"pexels.com"
+            hostname:"www.pexels.com",
+        },
+        {
+            protocol:'https',
+            hostname:"example.com",
         }
         ]
     }
