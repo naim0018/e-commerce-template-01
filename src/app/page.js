@@ -4,6 +4,7 @@ import Service from "@/components/Home/Service/Service";
 import SuperSale from "@/components/Home/SuperSale/SuperSale";
 import HotDealsBanner from "@/components/Home/HotDeals/HotDealsBanner";
 import ProductsTab from "@/components/Home/ProductsTab/ProductsTab";
+import ShopBanner from "@/components/Home/Shop Banner/ShopBanner";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <ProductsTab/>
       <DealsandExclusive/>
       <SuperSale/>
+      <ShopBanner/>
     </main>
   );
 }
