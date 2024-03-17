@@ -1,8 +1,11 @@
+import ElectronicsProducts from '@/components/Electronics/ElectronicsProducts/ElectronicsProducts'
 import React from 'react'
 
 const Electronics = () => {
   return (
-    <div>Electronics</div>
+    <div>
+      <ElectronicsProducts/>
+    </div>
   )
 }
 

@@ -1,8 +1,11 @@
+import MacrameCraftsProducts from '@/components/MacrameCrafts/MacrameCraftsProducts/MacrameCraftsProducts'
 import React from 'react'
 
 const MacrameCrafts = () => {
   return (
-    <div>MacrameCrafts</div>
+    <div className='my-10 '>
+      <MacrameCraftsProducts/>
+    </div>
   )
 }
 

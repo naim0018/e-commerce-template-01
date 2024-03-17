@@ -1,5 +1,5 @@
 "use client";
-import ProductsTabData from "@/components/ui/ProductsTabSection/ProductsTabData";
+import ProductsTabData from "@/components/Home/ProductsTabSection/ProductsTabData";
 import React, { useState } from "react";
 
 const ProductsTab = () => {

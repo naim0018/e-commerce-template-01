@@ -25,9 +25,9 @@ const ShowProducts = ({ item }) => {
           <p className="  text-white">{discountAmount}%</p>
         </div>
       )}
-      <div className="flex items-center justify-center w-full  p-5 flex-grow h-72">
+      <div className="flex items-center justify-center w-full  p-5 h-72">
         <Image
-          className="w-full h-full"
+          className=""
           src={image}
           alt={title}
           width={200}
