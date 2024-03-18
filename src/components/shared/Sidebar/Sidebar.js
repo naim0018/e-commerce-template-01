@@ -1,40 +1,51 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { MdOutlineChevronRight } from "react-icons/md";
 import SidebarHover from "./SidebarHover";
 
+// From Component
 const Sidebar = ({ title, navItems }) => {
-  const options =["price low to high","price high to low","ratings" , "best selling"]
+  const [show, setShow] = useState(false);
+  const [subCategory,setSubCategory] = useState('');
+  const options = [
+    "price low to high",
+    "price high to low",
+    "ratings",
+    "best selling",
+  ];
   return (
     <div className="my-20 text-center p-5 space-y-5">
-      <p>{title}</p>
-      
-     
-        <div className="flex items-center justify-between relative group border px-5">
-          <p>Sort by Price</p>
-          <MdOutlineChevronRight />
+      <p className="text-xl text-black/80 font-bold">{title}</p>
 
-
-          <div className="border bg-white absolute z-10 -top-2 -right-36 hidden group-hover:flex  flex-col space-y-3 p-3 ">
-        {
-          options?.map((option,inx)=><SidebarHover key={inx} option={option}/>)
-        }
-        
-      </div>
+      <div  className="relative ">
+        <div onClick={()=>setShow(!show)} className="  flex items-center justify-between p-2 ">
+        <p className="text-black font-medium">Sort by Price</p>
+        <div className={show ? `rotate-0 duration-200 ease-in` : 'rotate-90 duration-200 ease-out'}>
+        <MdOutlineChevronRight className="text-xl"/>
         </div>
 
-      <div className="space-y-4 px-5 relative group">
+        </div>
+
+        {show &&
+        <div className="opacity-100 duration-1000 ease-in bg-white absolute z-10 -top-2 -right-48 space-y-3 p-4 border ">
+          {options?.map((option, inx) => (
+            <SidebarHover key={inx} option={option} />
+          ))}
+        </div>
+        }
+      </div>
+     
+      <div className="space-y-1  relative group">
         {navItems?.map((nav, inx) => (
-          <div key={inx} className="flex items-center justify-between ">
-            <p>{nav}</p>
-            <MdOutlineChevronRight />
+          <div onClick={()=>setSubCategory(nav)} key={inx} className="flex items-center justify-between p-2 ">
+            <p className="text-black font-medium">{nav}</p>
+            <div className={  nav === subCategory ? `rotate-0 duration-200 ease-in` : 'rotate-90 duration-200 ease-out'}>
+        <MdOutlineChevronRight className="text-xl"/>
+        </div>
           </div>
         ))}
-    
       </div>
-
-
-        </div>
-  
+    </div>
   );
 };
 
