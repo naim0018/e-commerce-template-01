@@ -4,7 +4,7 @@ import React from 'react'
 const BannerProductsData = ({product}) => {
     const {title,image,price} = product
   return (
-    <div className='space-y-1 w-full h-full  flex flex-col items-center justify-center p-2'>
+    <div className='space-y-1 w-full h-full  flex flex-col items-center justify-center p-2 cursor-pointer '>
     <div className="flex-grow flex items-center justify-center">
     <Image src={image} alt='title' width={150} height={150} className='' />
     </div>
