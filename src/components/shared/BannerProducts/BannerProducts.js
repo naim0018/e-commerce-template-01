@@ -3,7 +3,7 @@ import BannerProductsData from '@/components/shared/BannerProducts/BannerProduct
 import Image from 'next/image'
 import React from 'react'
 const BannerProducts = ({color,products,productsNav}) => {
-    console.log(color)
+    
   return (
     <div className='grid grid-cols-6 items-center justify-center container mx-auto group-odd'>
         <div className= " w-full h-full relative ">

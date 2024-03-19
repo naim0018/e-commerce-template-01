@@ -270,7 +270,7 @@ const ShopBanner = () => {
     },
   ];
   
-  const booksData = [booksNav, books,'purple-500'];
+  const booksData = [booksNav, books,'red-500'];
   const macrameCraftsData=[macrameCraftsNav,macrameCrafts,'sky-500']
   const electronicsData = [electronicsNav, electronics,'green-500'];
 
