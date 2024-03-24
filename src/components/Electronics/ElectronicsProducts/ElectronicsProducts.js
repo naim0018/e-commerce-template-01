@@ -77,7 +77,7 @@ const ElectronicsProducts = () => {
     
     
   return (
-    <div className='grid grid-cols-4 items-center justify-center'>
+    <div className='grid grid-cols-4 gap-1 items-center justify-center'>
         {
             electronics?.map((electronic,inx)=>
           <ProductsCard key={inx} product={electronic}  /> 

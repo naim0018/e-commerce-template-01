@@ -20,19 +20,19 @@ const ProductsCard = ({ product }) => {
     width,
   } = product;
   return (
-    <div className="relative flex flex-col  cursor-pointer">
+    <div className="relative flex flex-col  cursor-pointer ">
       {discountAmount && (
         <p className="absolute top-8 right-0 bg-green-500 px-4 py-1 text-white font-lobster rounded-full">
           {discountAmount} %
         </p>
       )}
 
-      <div className="flex items-center justify-center w-full h-72 ">
+      <div className=" flex items-center justify-center w-full h-72 ">
         <Image src={image} alt={title} width={200} height={200} className="" />
       </div>
         <hr className="mx-5"/>
       <div className="p-3 space-y-1 w-full">
-        <h3>{title}</h3>
+        <h3 className="font-bold truncate">{title}</h3>
         {author && <p>{author}</p>}
         {publisher && <p>Publisher : {publisher}</p>}
         {category && <p>Category : {category}</p>}

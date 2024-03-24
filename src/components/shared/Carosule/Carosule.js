@@ -34,7 +34,8 @@ const Carosule = ({ item }) => {
 //   }, [nextSlider]);
   return (
     <div>
-      <div className=" relative overflow-hidden bg-red-500">
+      <div className=" relative overflow-hidden ">
+      
         {/* arrow left */}
         <button
           onClick={prevSlider}
